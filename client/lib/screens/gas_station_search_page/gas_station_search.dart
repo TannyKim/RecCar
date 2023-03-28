@@ -6,6 +6,9 @@ import 'package:draggable_bottom_sheet/draggable_bottom_sheet.dart';
 import 'package:http/http.dart';
 import 'dart:convert';
 import 'package:geolocator/geolocator.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
+
+String TmapApiKey = dotenv.env['TMAP_API_KEY']!;
 
 class NaverMapTest extends StatefulWidget {
   @override
@@ -301,7 +304,7 @@ class _NaverMapTestState extends State<NaverMapTest> {
 
   // Future<void> getGasInfo(id) async { // 유가 정보 불러오는 API
   //   Map<String, String> headers = {
-  //     "appkey": "l7xxe210feb29ba24deda6a06b0d0e88366a",
+  //     "appkey": TmapApiKey,
   //   };
   //   Response response = await get(
   //     Uri.parse(
@@ -316,7 +319,7 @@ class _NaverMapTestState extends State<NaverMapTest> {
 
   Future<void> search(keyword) async {
     Map<String, String> headers = {
-      "appkey": "l7xxe210feb29ba24deda6a06b0d0e88366a",
+      "appkey": TmapApiKey,
     };
     Response response = await get(
       Uri.parse(
