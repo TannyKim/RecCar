@@ -416,8 +416,6 @@ docekr run --rm -d -p 8081:8081 --name fastapi-latest 이미지ID
 
 
 ### 차량 영상 등록
-<p align="center">
-  ![차량등록](../assets/regist.gif)
-</p>
+![차량등록](../assets/regist.gif){: .align-center}
 
 
